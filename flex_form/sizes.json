@@ -1,0 +1,8 @@
+{
+	"sizes" : 
+	[
+		{"id" : 1, "size" : "small"},
+		{"id" : 2, "size" : "medium"},
+		{"id" : 3, "size" : "large"}
+	]
+}

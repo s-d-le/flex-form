@@ -1,0 +1,35 @@
+
+My name is ___Son Le__ I live by myself
+I would like to adopt _____>> [cat, dog, panda]
+
+var query = [animals]
+http.get('localhost/' + query +.json);
+
+localhost/animals.json ==> {
+	"animals" : 
+	[
+		{"id" : 1, "option" : "cat"},
+		{"id" : 2, "option" : "dog"},
+		{"id" : 3, "option" : "panda"}
+	]
+}
+
+request: localhost/options/animals (select * from animals)
+request: localhost/options/people (select * from people)
+request: localhost/options/? 
+
+Use Html select for the drop down options
+
+select
+	<option ng-repeat...>
+select
+
+- Get array of options => [animals, animals,animals, sizes...]
+- Find duplicate, replace into one record => [animals, size] We only want to query the options once
+- Query the options
+- Return options in sets 
+
+<select ng-model="orderProp" ng-options="place.category for place in places | unique:'category'">
+    <option value="0">Default</option>
+    // unique options from the categories
+</select>

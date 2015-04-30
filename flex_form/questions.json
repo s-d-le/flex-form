@@ -1,0 +1,14 @@
+{
+	"questions" : 
+	[
+		{"id" : 1, "child" : 2, "step" : 1, "question" : "My name is [user]", "inputType" : "text"},
+		{"id" : 2, "child" : 4, "step" : 1, "question" : "I live by myself [none]", "inputType" : "none"},
+		{"id" : 3, "child" : 5, "step" : 1, "question" : "I live with [animals]", "inputType" : "option"},
+		{"id" : 4, "child" : 7, "step" : 2, "question" : "I would like to adopt [animals]", "inputType" : "option"},
+		{"id" : 5, "child" : 6, "step" : 2, "question" : "My [animals] is [animals_year] old", "inputType" : "option"},
+		{"id" : 6, "child" : 0, "step" : 3, "question" : "My [animals] is [sizes]", "inputType" : "option"},
+		{"id" : 7, "child" : 0, "step" : 3, "question" : "I like [sizes] [animals]", "inputType" : "option"}
+	]
+}
+
+

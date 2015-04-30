@@ -1,0 +1,8 @@
+{
+	"animals" : 
+	[
+		{"id" : 1, "option" : "cat"},
+		{"id" : 2, "option" : "dog"},
+		{"id" : 3, "option" : "panda"}
+	]
+}

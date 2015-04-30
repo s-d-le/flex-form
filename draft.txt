@@ -1,0 +1,87 @@
+
+My name is ___Son Le__ I live by myself
+I would like to adopt _____>> [cat, dog, panda]
+
+var query = [animals]
+http.get('localhost/' + query +.json);
+
+localhost/animals.json ==> {
+	"animals" : 
+	[
+		{"id" : 1, "option" : "cat"},
+		{"id" : 2, "option" : "dog"},
+		{"id" : 3, "option" : "panda"}
+	]
+}
+
+request: localhost/options/animals (select * from animals)
+request: localhost/options/people (select * from people)
+request: localhost/options/?
+
+					<ul ng-repeat="q in escapedHtml">
+						
+						<li>
+							{{ q }}
+						</li>
+
+					</ul>
+
+					<ul ng-repeat="p in selectedInputType">
+
+						<li>
+							{{ p }}
+						</li>
+
+					</ul>
+
+					<select name="" id="" ng-repeat="o in optionData">
+					<option ng-repeat="p in o" value="p">{{p.option}}</option>
+					</select>
+
+Use Html select for the drop down options
+
+select
+	<option ng-repeat...>
+select
+
+- Get array of options => [animals, animals,animals, sizes...]
+- Find duplicate, replace into one record => [animals, size] We only want to query the options once
+- Query the options
+- Return options in sets 
+
+<select ng-model="orderProp" ng-options="place.category for place in places | unique:'category'">
+    <option value="0">Default</option>
+    // unique options from the categories
+</select>
+
+//hardcoded HTML
+
+questions= [
+"My name is <select><option>dog</option><select>"
+]
+My name is [user].replace('[user]','<select><option>dog</option><select>'')
+arrayData= [('user','<select><option>dog</option><select>')]
+function x(question){
+	for (var num in $scope.replaced){
+		if(question.indexOf($scope.replaced[num][0])!=-1){
+			question.replace($scope.replaced[num][0],$scope.replaced[num][1])
+		}
+	}
+	return question;
+}
+
+escapedHtml=[] //['My name is <select....>']
+questionInput=[] //data
+for(var num in questionInput){
+	escapedHtml.push(x(questionInput[num].question)) //call function x to replace key to HTML. Then push the replaced HTML to the escaped HTML
+}
+
+To make the generated HTML dynamic, check
+http://stackoverflow.com/questions/20297638/call-function-inside-sce-trustashtml-string-in-angular-js
+
+					for (var key in data) {
+						if (data.hasOwnProperty(key)) {
+							console.log(data[key][0].option);
+							$scope.optionData.push("<option>" + data[key][0].option + "</option>");
+						}
+					}
